@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <icon link rel="icon" href="./public/SchemesHub Logo.png" />
+    <title>SchemesHub - Discover All Government Schemes in India at one Place</title>
+    
+    <meta name="description" content="Explore and access government schemes across India. All-in-one platform for agriculture, education, healthcare, and more." />
+    <meta name="author" content="Bhumi Sharma" />
+
+    <meta property="og:title" content="SchemesHub - Government Schemes Portal" />
+    <meta property="og:description" content="Comprehensive platform to discover and access government schemes in India" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gov-schemes.s3.ap-south-1.amazonaws.com/schemes/SchemesHub+Logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Bhumi_sharma" />
+    <meta name="twitter:image" content="https://gov-schemes.s3.ap-south-1.amazonaws.com/schemes/SchemesHub+Logo.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    })(window.location);
+  </script>
+  </body>
+</html>
